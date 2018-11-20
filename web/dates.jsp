@@ -27,6 +27,10 @@
         background-color: #FFF;
         padding: 10px;
     }
+    .grid-item{
+        font-family: "Comic Sans MS";
+        font-weight: bold;
+    }
     .item1{
         grid-row: 1 / 8;
         padding-right: 10px;
@@ -38,58 +42,39 @@
         border-collapse: collapse;
         width: 100%;
     }
-
-.address-bar {
-  padding-bottom: 5px;
-}
-
-.btn {
-    margin-top: 5px;
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    width: 5%;
-    padding: 12px 16px;
-    font-size: 25px;
-    cursor: pointer;
-}
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 15px 25px;
-  text-decoration: none;
-  font-size: 30px;
-  font-family: "Luckiest Guy";
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #37a69b;
-  color: white;
-}
-
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 4px;
-  font-size: 17px;
-  border: none;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-    background-color: RoyalBlue;
-}
+    .address-bar {
+        padding-bottom: 5px;
+    }
+    .btn {
+        margin-top: 5px;
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        width: 5%;
+        padding: 12px 16px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: #e9e9e9;
+    }
+    .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 25px 25px;
+        text-decoration: none;
+        font-size: 50px;
+        color: dodgerblue;
+        font-family: "Luckiest Guy";
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    /* Darker background on mouse-over */
+    .btn:hover {
+        background-color: RoyalBlue;
+    }
 </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,20 +99,13 @@
     
     <div class="grid-container">
         <div class="grid-item">
-            <p> Addresses are important because they tell you where something is. 
-                Addresses are used when someone has to mail something. They can also 
-                be used to search for a place, like when you search for the weather!
-                Addresses are made up of:
-                <br> PERSONS NAME </br> 
-                STREET ADDRESS, CITY 
-                <br> STATE ZIPCODE </br>
-                To search for weather on our website you only need to use CITY, STATE
-                try it out! STATE will be in the abbreviated, or short, form. So IOWA
-                would be shortened to IA.
+            <p> Dates are important for many reasons! Dates are related to seasons
+                which usually change along with the weather. Summer is usually hot
+                and winter is usually cold!
             </p>
         </div>
         <div class="grid-item">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/y2d-0dIimgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/WvXEdd84Hpo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
         </div>
     </div>
 </body>

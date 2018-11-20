@@ -54,12 +54,13 @@
         font-size: 32px;
         border-collapse: collapse;
         width: 100%;
+        color: #e9e9e9;
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
     .topnav {
         overflow: hidden;
         background-color: #e9e9e9;
     }
-
     .topnav a {
         float: left;
         display: block;
@@ -72,15 +73,12 @@
         font-family: "Luckiest Guy";
         text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
-
     .address-bar {
         padding-bottom: 5px;
     }
-
     .search-container {
         float: right;
     }
-
     .search-container .btn {
         float: right;
         margin-top: 5px;
@@ -92,14 +90,12 @@
         font-size: 25px;
         cursor: pointer;
     }
-
     .search-container .search-bar {
         font-size: 20px;
         width: 75%;
         height: 50px;
         margin: 5px 5px 0 0;
     }
-
     .btn {
         margin-top: 5px;
         background-color: DodgerBlue;
@@ -110,12 +106,10 @@
         font-size: 25px;
         cursor: pointer;
     }
-
     /* Darker background on mouse-over */
     .btn:hover {
         background-color: RoyalBlue;
     }
-
     @media screen and (max-width: 600px) {
         .topnav .search-container {
             float: none;

@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Luckiest+Guy" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <style>      
-    table, th, td{
+table, th, td{
         padding: 1px;
         border: 1px solid black;
     }
@@ -26,6 +26,10 @@
         grid-template-rows: 200px;
         background-color: #FFF;
         padding: 10px;
+    }
+    .grid-item{
+        font-family: "Comic Sans MS";
+        font-weight: bold;
     }
     .item1{
         grid-row: 1 / 8;
@@ -38,58 +42,39 @@
         border-collapse: collapse;
         width: 100%;
     }
-
-.address-bar {
-  padding-bottom: 5px;
-}
-
-.btn {
-    margin-top: 5px;
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    width: 5%;
-    padding: 12px 16px;
-    font-size: 25px;
-    cursor: pointer;
-}
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 15px 25px;
-  text-decoration: none;
-  font-size: 30px;
-  font-family: "Luckiest Guy";
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #37a69b;
-  color: white;
-}
-
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 4px;
-  font-size: 17px;
-  border: none;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-    background-color: RoyalBlue;
-}
+    .address-bar {
+        padding-bottom: 5px;
+    }
+    .btn {
+        margin-top: 5px;
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        width: 5%;
+        padding: 12px 16px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: #e9e9e9;
+    }
+    .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 25px 25px;
+        text-decoration: none;
+        font-size: 50px;
+        color: dodgerblue;
+        font-family: "Luckiest Guy";
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    /* Darker background on mouse-over */
+    .btn:hover {
+        background-color: RoyalBlue;
+    }
 </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,20 +96,19 @@
     
     <div class="grid-container">
         <div class="grid-item">
-            <p> Addresses are important because they tell you where something is. 
-                Addresses are used when someone has to mail something. They can also 
-                be used to search for a place, like when you search for the weather!
-                Addresses are made up of:
-                <br> PERSONS NAME </br> 
-                STREET ADDRESS, CITY 
-                <br> STATE ZIPCODE </br>
-                To search for weather on our website you only need to use CITY, STATE
-                try it out! STATE will be in the abbreviated, or short, form. So IOWA
-                would be shortened to IA.
+            <p> When reading the weather there are some important things to look
+                for. "60F 5mph N" means that it is 60 degrees Farenheit outside
+                with a 5 mile per hour wind coming from the North. Farenheit is
+                a scale used to measure weather in the United States and some
+                other places, you might use Celsius though! Miles per hour is 
+                used to measure the speed of the wind, this could also be kilometers
+                per hour depending on your location! When you see things like 
+                "60F/40F" these are the high and low temperatures for the day. 60F
+                will be the high and 40F will be the low!
             </p>
         </div>
         <div class="grid-item">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/y2d-0dIimgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hj1MG3e6Y1M?start=73" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
         </div>
     </div>
 </body>

@@ -42,43 +42,39 @@
         border-collapse: collapse;
         width: 100%;
     }
-
-.address-bar {
-  padding-bottom: 5px;
-}
-
-.btn {
-    margin-top: 5px;
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    width: 5%;
-    padding: 12px 16px;
-    font-size: 25px;
-    cursor: pointer;
-}
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 25px 25px;
-  text-decoration: none;
-  font-size: 50px;
-  color: dodgerblue;
-  font-family: "Luckiest Guy";
-  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-    background-color: RoyalBlue;
-}
+    .address-bar {
+        padding-bottom: 5px;
+    }
+    .btn {
+        margin-top: 5px;
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        width: 5%;
+        padding: 12px 16px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: #e9e9e9;
+    }
+    .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 25px 25px;
+        text-decoration: none;
+        font-size: 50px;
+        color: dodgerblue;
+        font-family: "Luckiest Guy";
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    /* Darker background on mouse-over */
+    .btn:hover {
+        background-color: RoyalBlue;
+    }
 </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
