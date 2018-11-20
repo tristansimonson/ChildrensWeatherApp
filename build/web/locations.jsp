@@ -103,7 +103,7 @@
     
     <ul class="address-bar">
         <a href="location.jsp"><button class="btn"><i class="fa fa-home"></i></button></a>
-        <a href="addresses.jsp"><button class="btn"><i class="fa fa-globe"></i></button></a>
+        <a href="addresses.jsp"><button class="btn"><i class="fa fa-address-book"></i></button></a>
         <a href="disasters.jsp"><button class="btn"><i class="fa fa-bolt"></i></button></a>
         <a href="dates.jsp"><button class="btn"><i class="fa fa-calendar"></i></button></a>
     </ul>

@@ -27,6 +27,10 @@
         background-color: #FFF;
         padding: 10px;
     }
+    .grid-item{
+        font-family: "Comic Sans MS";
+        font-weight: bold;
+    }
     .item1{
         grid-row: 1 / 8;
         padding-right: 10px;
@@ -63,27 +67,12 @@
   display: block;
   color: black;
   text-align: center;
-  padding: 15px 25px;
+  padding: 25px 25px;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 50px;
+  color: dodgerblue;
   font-family: "Luckiest Guy";
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #37a69b;
-  color: white;
-}
-
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 4px;
-  font-size: 17px;
-  border: none;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 /* Darker background on mouse-over */
@@ -103,7 +92,7 @@
     
     <ul class="address-bar">
         <a href="location.jsp"><button class="btn"><i class="fa fa-home"></i></button></a>
-        <a href="locations.jsp"><button class="btn"><i class="fa fa-address-book"></i></button></a>
+        <a href="locations.jsp"><button class="btn"><i class="fa fa-globe"></i></button></a>
         <a href="disasters.jsp"><button class="btn"><i class="fa fa-bolt"></i></button></a>
         <a href="dates.jsp"><button class="btn"><i class="fa fa-calendar"></i></button></a>
     </ul>
@@ -117,13 +106,15 @@
             <p> Addresses are important because they tell you where something is. 
                 Addresses are used when someone has to mail something. They can also 
                 be used to search for a place, like when you search for the weather!
-                Addresses are made up of:
+                <br></br>
+                Addresses look like this:
                 <br> PERSONS NAME </br> 
-                STREET ADDRESS, CITY 
-                <br> STATE ZIPCODE </br>
-                To search for weather on our website you only need to use CITY, STATE
+                STREET ADDRESS 
+                <br> CITY, STATE ZIPCODE </br>
+                
+                <br> To search for weather on our website you only need to use CITY, STATE
                 try it out! STATE will be in the abbreviated, or short, form. So IOWA
-                would be shortened to IA.
+                would be shortened to IA. </br>
             </p>
         </div>
         <div class="grid-item">

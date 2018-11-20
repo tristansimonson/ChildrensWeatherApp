@@ -27,14 +27,14 @@
     }
     .grid-container {
         display: grid;
-        grid-template-columns: 40% 30% 30%;
-        grid-template-rows: 200px;
+        grid-template-columns: 25% 40% 35%;
         background-color: #FFF;
         padding: 10px;
     }
     .grid-outfit {
         display: grid;
         grid-template-columns: auto;
+        grid-template-rows: auto auto;
         background-color: #FFF;
         padding: 10px;
     }
@@ -51,102 +51,87 @@
     #summary {
         /*font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;*/
         font-family: "Luckiest Guy";
-        font-size: 25px;
+        font-size: 32px;
         border-collapse: collapse;
         width: 100%;
     }
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
+    .topnav {
+        overflow: hidden;
+        background-color: #e9e9e9;
+    }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 30px;
-  font-family: "Luckiest Guy";
-}
+    .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 25px 25px;
+        text-decoration: none;
+        font-size: 50px;
+        color: dodgerblue;
+        font-family: "Luckiest Guy";
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+    .address-bar {
+        padding-bottom: 5px;
+    }
 
-.topnav a.active {
-  background-color: #37a69b;
-  color: white;
-}
+    .search-container {
+        float: right;
+    }
 
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 4px;
-  font-size: 17px;
-  border: none;
-}
+    .search-container .btn {
+        float: right;
+        margin-top: 5px;
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        width: 20%;
+        padding: 12px 16px;
+        font-size: 25px;
+        cursor: pointer;
+    }
 
-.address-bar {
-  padding-bottom: 5px;
-}
+    .search-container .search-bar {
+        font-size: 20px;
+        width: 75%;
+        height: 50px;
+        margin: 5px 5px 0 0;
+    }
 
-.search-container {
-  float: right;
-}
+    .btn {
+        margin-top: 5px;
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        width: 5%;
+        padding: 12px 16px;
+        font-size: 25px;
+        cursor: pointer;
+    }
 
-.search-container .btn {
-    float: right;
-    margin-top: 5px;
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    width: 20%;
-    padding: 12px 16px;
-    font-size: 25px;
-    cursor: pointer;
-}
+    /* Darker background on mouse-over */
+    .btn:hover {
+        background-color: RoyalBlue;
+    }
 
-.search-container .search-bar {
-  font-size: 20px;
-  width: 75%;
-  height: 50px;
-  margin: 5px 5px 0 0;
-}
-
-.btn {
-    margin-top: 5px;
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    width: 5%;
-    padding: 12px 16px;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-    background-color: RoyalBlue;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
-  }
-  .topnav a, .topnav input[type=text], .topnav .search-container .btn {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;  
-  }
-}
+    @media screen and (max-width: 600px) {
+        .topnav .search-container {
+            float: none;
+        }
+        .topnav a, .topnav input[type=text], .topnav .search-container .btn {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
+        }
+        .topnav input[type=text] {
+            border: 1px solid #ccc;  
+        }
+    }
 </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -165,24 +150,55 @@
                 document.getElementById("currently").innerHTML = data.temperatureF + " " + data.wind;
                 document.getElementById("todayHighLow").innerHTML = data.highTemperatureF + "/" + data.lowTemperatureF;
                 document.getElementById("tomorrowHighLow").innerHTML = data.tomorrowHighF + "/" + data.tomorrowLowF;
+                var tempDescription = "HOT";
+                document.getElementById("tempDescription").style.color = "red";
+                document.getElementById("outfitHeader").style.color = "red";
+                document.getElementById("thermIMG").src = "images/hot-therm-white.jpg";
+                var strippedTemp = data.temperatureF.replace("F", "");
+                var temp = parseInt(strippedTemp);
+                if(temp <= 70 && temp > 60){
+                    tempDescription = "WARM";
+                    document.getElementById("thermIMG").src = "images/hot-therm-white.jpg";
+                    document.getElementById("tempDescription").style.color = "orange";
+                    document.getElementById("outfitHeader").style.color = "orange";
+                }
+                if(temp <= 60 && temp > 45){
+                    tempDescription = "COOL";
+                    document.getElementById("thermIMG").src = "images/cold-therm-white.jpg";
+                    document.getElementById("tempDescription").style.color = "deepskyblue";
+                    document.getElementById("outfitHeader").style.color = "deepskyblue";
+                }
+                if(temp <= 45){
+                    tempDescription = "COLD";
+                    document.getElementById("thermIMG").src = "images/cold-therm-white.jpg";
+                    document.getElementById("tempDescription").style.color = "cornflowerblue";
+                    document.getElementById("outfitHeader").style.color = "cornflowerblue";
+                }
+                document.getElementById("outfitHeader").innerHTML = "Pick an Outfit";
+                document.getElementById("tempDescription").innerHTML = tempDescription;
             })
         }
         
         function checkOutfit(outfit){
-            if(outfit === 1 && document.getElementById("tempDescription").innerHTML === "HOT"){
+            if(outfit === 1 && document.getElementById("tempDescription").innerHTML === "COLD"){
                 document.getElementById("outfitHeader").innerHTML = "Correct";
+                document.getElementById("outfitHeader").style.color = "green";
             }
             else if(outfit === 2 && document.getElementById("tempDescription").innerHTML === "WARM"){
                 document.getElementById("outfitHeader").innerHTML = "Correct"; 
+                document.getElementById("outfitHeader").style.color = "green";
             }
             else if(outfit === 2 && document.getElementById("tempDescription").innerHTML === "COOL"){
-                document.getElementById("outfitHeader").innerHTML = "Correct";            
+                document.getElementById("outfitHeader").innerHTML = "Correct";
+                document.getElementById("outfitHeader").style.color = "green";
             }
-            else if(outfit === 3 && document.getElementById("tempDescription").innerHTML === "COLD"){
-                document.getElementById("outfitHeader").innerHTML = "Correct";            
+            else if(outfit === 3 && document.getElementById("tempDescription").innerHTML === "HOT"){
+                document.getElementById("outfitHeader").innerHTML = "Correct";   
+                document.getElementById("outfitHeader").style.color = "green";
             }
             else{
                 document.getElementById("outfitHeader").innerHTML = "Incorrect"; 
+                document.getElementById("outfitHeader").style.color = "red";
             }
         }
     </script>
@@ -191,8 +207,8 @@
     </header>
     
     <ul class="address-bar">
-        <a href="addresses.jsp"><button class="btn"><i class="fa fa-globe"></i></button></a>
-        <a href="locations.jsp"><button class="btn"><i class="fa fa-address-book"></i></button></a>
+        <a href="addresses.jsp"><button class="btn"><i class="fa fa-address-book"></i></button></a>
+        <a href="locations.jsp"><button class="btn"><i class="fa fa-globe"></i></button></a>
         <a href="disasters.jsp"><button class="btn"><i class="fa fa-bolt"></i></button></a>
         <a href="dates.jsp"><button class="btn"><i class="fa fa-calendar"></i></button></a>
         <a href="info.jsp"><button class="btn"><i class="fa fa-question-circle"></i></button></a>
@@ -207,7 +223,7 @@
     <div class="grid-container" id="summary">
         <div class="grid-item">
             <div>
-                <img width="40%" height="40%" src="images/hot-therm-white.jpg" alt="thermometer image" >
+                <img id="thermIMG" width="80%" height="80%" src="images/hot-therm-white.jpg" alt="thermometer image" >
             </div>
             <%  
             Class.forName("com.mysql.jdbc.Driver");
@@ -258,20 +274,20 @@
                     tempDescription = "WARM";
                     tempColor = "orange";
                 }
-                else if(temp <= 60 && temp > 45){
+                if(temp <= 60 && temp > 45){
                     tempDescription = "COOL";
                     tempColor = "light blue";
                 }
-                else{
+                if(temp <= 45){
                     tempDescription = "COLD";
                     tempColor = "blue";
                 }
             %>
         </div>    
-        <div class="grid-item">
+        <div class="grid-item" style="padding-top: 25px">
             <div>
                 <div>
-                    <h style="color:<%=tempColor%>; font-size:100px; font-family:Luckiest Guy" id="tempDescription"><%=tempDescription%></h>
+                    <h style="color:<%=tempColor%>; font-size:100px; font-family:Luckiest Guy; text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" id="tempDescription"><%=tempDescription%></h>
                     <p id="currently"><%=displayresultset.getString(1)%> <%=displayresultset.getString(7)%></p>
                 </div>
                 <p id="todayHighLow"> <%=displayresultset.getString(3)%>/<%=displayresultset.getString(5)%></p>
@@ -284,9 +300,9 @@
             }
             %>
         </div>
-        <div class="grid-item">
+        <div class="grid-item" style="padding-top: 25px">
             <div class="grid-outfit">
-                <h style="color:black; font-size: 40px" id="outfitHeader"> Pick an Outfit </h>
+                <h style="color:<%=tempColor%>; font-size: 40px; text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" id="outfitHeader"> Pick an Outfit </h>
                 <div id="1" onclick="checkOutfit(1)">
                     <img width="100" src="images/boy-cold-weather.png" alt="boy cold" >
                     <img width="100" src="images/girl-cold-weather.png" alt="girl cold" >
