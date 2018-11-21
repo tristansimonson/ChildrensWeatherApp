@@ -1,13 +1,13 @@
 # ChildrensWeatherApp
 Children Computer Interaction project. Uses Java (Servlets), HTML, CSS, Javascript and MySQL.
 
-Objective:
+Objective: <br />
 Create a website that accurately and efficiently teaches chilren how to read the weather and how to dress for different temperatures/seasons. Weather is only displayed for the current day and the following day in terms of high and low. The wind temperature is also included to provide a more accurate representation of the weather. Characteristics, such as humidity, have been omitted because they are not as important to focus on. 
 
-Screenshots:
+Screenshots: <br />
 Screenshots are included in the screenshots folder to provide a preview of the website without having to launch it. These do not cover all screens and may not be the most current build.
 
-Set-up:
+Set-up: <br />
 Apache/Tomcat Server was used to host the "childrens_weatherdb" which contains a today table. Today contains all of the information necessary for the website to run but could be greatly improved due to its redundancy. A script is included to populate the database, this file is childrens_weather_db_script.sql. Netbeans was also used in union with the server to launch the website.
 
 Required Libraries:
