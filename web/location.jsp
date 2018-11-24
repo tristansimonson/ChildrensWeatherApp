@@ -30,6 +30,7 @@
         grid-template-columns: 25% 40% 35%;
         background-color: #FFF;
         padding: 10px;
+        line-height: 0.75;
     }
     .grid-outfit {
         display: grid;
@@ -146,6 +147,7 @@
                 document.getElementById("tomorrowHighLow").innerHTML = data.tomorrowHighF + "/" + data.tomorrowLowF;
                 var tempDescription = "HOT";
                 document.getElementById("tempDescription").style.color = "red";
+                document.getElementById("currently").style.color = "red";
                 document.getElementById("outfitHeader").style.color = "red";
                 document.getElementById("thermIMG").src = "images/hot-therm-white.jpg";
                 var strippedTemp = data.temperatureF.replace("F", "");
@@ -154,18 +156,21 @@
                     tempDescription = "WARM";
                     document.getElementById("thermIMG").src = "images/hot-therm-white.jpg";
                     document.getElementById("tempDescription").style.color = "orange";
+                    document.getElementById("currently").style.color = "orange";
                     document.getElementById("outfitHeader").style.color = "orange";
                 }
                 if(temp <= 60 && temp > 45){
                     tempDescription = "COOL";
                     document.getElementById("thermIMG").src = "images/cold-therm-white.jpg";
                     document.getElementById("tempDescription").style.color = "deepskyblue";
+                    document.getElementById("currently").style.color = "deepskyblue";
                     document.getElementById("outfitHeader").style.color = "deepskyblue";
                 }
                 if(temp <= 45){
                     tempDescription = "COLD";
                     document.getElementById("thermIMG").src = "images/cold-therm-white.jpg";
                     document.getElementById("tempDescription").style.color = "cornflowerblue";
+                    document.getElementById("currently").style.color = "cornflowerblue";
                     document.getElementById("outfitHeader").style.color = "cornflowerblue";
                 }
                 document.getElementById("outfitHeader").innerHTML = "Pick an Outfit";
@@ -282,7 +287,7 @@
             <div>
                 <div>
                     <h style="color:<%=tempColor%>; font-size:100px; font-family:Luckiest Guy; text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" id="tempDescription"><%=tempDescription%></h>
-                    <p id="currently"><%=displayresultset.getString(1)%> <%=displayresultset.getString(7)%></p>
+                    <p id="currently" style="color:<%=tempColor%>; font-size:40px"><%=displayresultset.getString(1)%> <%=displayresultset.getString(7)%></p>
                 </div>
                 <p id="todayHighLow"> <%=displayresultset.getString(3)%>/<%=displayresultset.getString(5)%></p>
             </div>
