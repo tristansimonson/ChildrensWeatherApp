@@ -100,11 +100,13 @@ table, th, td{
                 for. "60F 5mph N" means that it is 60 degrees Farenheit outside
                 with a 5 mile per hour wind coming from the North. Farenheit is
                 a scale used to measure weather in the United States and some
-                other places, you might use Celsius though! Miles per hour is 
-                used to measure the speed of the wind, this could also be kilometers
-                per hour depending on your location! When you see things like 
-                "60F/40F" these are the high and low temperatures for the day. 60F
-                will be the high and 40F will be the low!
+                other places, you might use Celsius though! To compare Farenheit
+                and Celsius, click "F" and "C" to the right of the search bar.
+                Miles per hour is used to measure the speed of the wind, this 
+                could also be kilometers per hour depending on your location! 
+                When you see things like "60F/40F" these are the high and low 
+                temperatures for the day. 60F will be the high and 40F will be 
+                the low!
             </p>
         </div>
         <div class="grid-item">

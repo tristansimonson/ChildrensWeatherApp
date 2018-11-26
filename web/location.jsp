@@ -211,6 +211,8 @@
         <a href="disasters.jsp"><button class="btn"><i class="fa fa-bolt"></i></button></a>
         <a href="dates.jsp"><button class="btn"><i class="fa fa-calendar"></i></button></a>
         <a href="info.jsp"><button class="btn"><i class="fa fa-question-circle"></i></button></a>
+        <a><button id="celcius" class="btn" style="float: right">C</button></a>
+        <button id="fahrenheit" class="btn" style="float: right; margin-left: 5px; margin-right: 5px">F</button>
         <div class="search-container">
             <button class="btn" id="myBtn" onclick="changeLoc(document.getElementById('cityState').value)"><i class="fa fa-search" ></i></button>      
             <input class="search-bar" id="cityState" style="float:right" type="text" placeholder="ex. Iowa City, IA" name="cityState">
